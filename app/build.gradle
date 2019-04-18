@@ -42,4 +42,11 @@ dependencies {
 
     // Основная библиотека GoogleMapKit.
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
+
+    // Библиотеки OSM
+    implementation 'com.github.MKergall:osmbonuspack:6.6.0'
+    implementation 'org.osmdroid:osmdroid-mapsforge:6.1.0@aar'
+    implementation 'org.mapsforge:mapsforge-map-android:0.10.0'
+    implementation 'org.mapsforge:mapsforge-map:0.10.0'
+    implementation 'org.mapsforge:mapsforge-themes:0.10.0'
 }

@@ -21,14 +21,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         fragmentTransaction.add(R.id.container, googleMapsFragment)
         fragmentTransaction.commit()
 
-        yandexBtn.setOnClickListener {
-
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            val yandexFragment = YandexMapFragment()
-            fragmentTransaction.replace(R.id.container, yandexFragment)
-            fragmentTransaction.commit()
-        }
-
         googleBtn.setOnClickListener {
             val googleMapsFragment = SupportMapFragment()
             googleMapsFragment.getMapAsync(this)
@@ -36,6 +28,21 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             fragmentTransaction.replace(R.id.container, googleMapsFragment)
             fragmentTransaction.commit()
         }
+
+        yandexBtn.setOnClickListener {
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            val yandexFragment = YandexMapFragment()
+            fragmentTransaction.replace(R.id.container, yandexFragment)
+            fragmentTransaction.commit()
+        }
+
+        osmBtn.setOnClickListener {
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            val osmFragment = OSMMapFragment()
+            fragmentTransaction.replace(R.id.container, osmFragment)
+            fragmentTransaction.commit()
+        }
+
     }
 
     override fun onMapReady(googleMap: GoogleMap) {}
